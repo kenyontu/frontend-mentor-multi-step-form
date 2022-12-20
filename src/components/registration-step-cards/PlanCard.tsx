@@ -67,7 +67,7 @@ export default function PlanCard(
 }
 
 function getIconPath(iconName: string) {
-  return `/assets/images/icon-${iconName}.svg`
+  return `assets/images/icon-${iconName}.svg`
 }
 
 function getPriceMessage(plan: Plan, type: PriceType) {

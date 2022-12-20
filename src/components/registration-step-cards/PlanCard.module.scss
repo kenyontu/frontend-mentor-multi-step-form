@@ -1,0 +1,97 @@
+.planList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.planWrapper {
+  position: relative;
+}
+
+.planRadio {
+  position: absolute;
+  width: 1;
+  height: 1;
+  opacity: 0;
+
+  &:checked + .plan {
+    background-color: var(--clr-very-light-gray);
+    border-color: var(--clr-purple);
+  }
+
+  &:hover + .plan {
+    border-color: var(--clr-purple);
+  }
+
+  &:focus + .plan {
+    outline: var(--outline);
+  }
+}
+
+.plan {
+  --icon-size: 2.5rem;
+  --pad-top: 0.875rem;
+  --pad-sides: 1rem;
+  display: block;
+  position: relative;
+  border: 1px solid var(--clr-gray);
+  border-radius: 8px;
+  padding: var(--pad-top) var(--pad-sides) 1.0625rem
+    calc(var(--pad-sides) + var(--icon-size) + 0.875rem);
+  cursor: pointer;
+}
+
+.planIcon {
+  position: absolute;
+  top: var(--pad-top);
+  left: var(--pad-sides);
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.planName {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-denim);
+}
+
+.planPrice {
+  margin-top: 0.4375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--clr-gray);
+}
+
+.yearlyBonusMessage {
+  margin-top: 0.4375rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: var(--clr-denim);
+}
+
+.priceTypeSelector {
+  margin-top: 1.5em;
+}
+
+@media only screen and (min-width: 1024px) {
+  .planList {
+    flex-direction: row;
+    gap: 1.125rem;
+  }
+
+  .planWrapper {
+    flex: 1;
+  }
+
+  .plan {
+    padding: 1.25rem 1rem 1rem;
+  }
+
+  .planIcon {
+    position: unset;
+  }
+
+  .planName {
+    margin-top: 2.4375rem;
+  }
+}

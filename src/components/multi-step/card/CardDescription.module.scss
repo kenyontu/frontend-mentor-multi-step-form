@@ -1,0 +1,8 @@
+.description {
+  margin: 0.5625rem 0 1.375rem;
+  color: var(--clr-gray);
+
+  @media only screen and (min-width: 1024px) {
+    margin: 0.6875rem 0 2.5rem;
+  }
+}

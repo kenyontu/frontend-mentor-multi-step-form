@@ -1,0 +1,58 @@
+.main {
+  --card-side-padding: 1rem;
+  position: relative;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  margin-top: -4.5625rem;
+}
+
+.cardWrapper {
+  flex: 1;
+  padding: 0 var(--card-side-padding) 1rem;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.thankYouCardWrapper {
+  flex: 1;
+  padding: 0 var(--card-side-padding);
+  min-height: 0;
+  overflow-y: auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .main {
+    --padding: 1rem;
+    height: unset;
+    width: 940px;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding);
+    background-color: var(--clr-white);
+    border-radius: 15px;
+  }
+
+  .content {
+    margin-top: unset;
+    height: unset;
+    flex: 1;
+    padding: calc(3.5rem - var(--padding))
+      calc(6.25rem - var(--padding) - var(--card-side-padding))
+      calc(2rem - var(--padding)) calc(6.25rem - var(--card-side-padding));
+  }
+
+  .thankYouCardWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}

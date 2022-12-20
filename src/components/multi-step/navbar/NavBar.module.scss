@@ -1,0 +1,81 @@
+.container {
+  --btn-font-size: 0.875rem;
+  --btn-font-weight: 500;
+  --btn-padding: 0.75rem 1rem;
+  --btn-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--clr-white);
+  padding: 1rem;
+  box-shadow: 0 -8px 40px -20px rgba(0, 0, 0, 0.0951);
+}
+
+.goBackButton {
+  color: var(--clr-gray);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--clr-denim);
+  }
+
+  &:focus {
+    outline: var(--outline);
+    outline-offset: var(--outline-offset);
+  }
+}
+
+.nextStepButton {
+  background-color: var(--clr-denim);
+  color: var(--clr-white);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+
+  &:only-child {
+    margin-left: auto;
+  }
+
+  &:hover {
+    background-color: hsl(213, 72%, 31%);
+  }
+
+  &:focus {
+    outline: var(--outline);
+    outline-offset: var(--outline-offset);
+  }
+}
+
+.confirmButton {
+  background-color: var(--clr-purple);
+  color: var(--clr-white);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+
+  &:hover {
+    background-color: hsl(243, 100%, 77%);
+  }
+
+  &:focus {
+    outline: var(--outline);
+    outline-offset: var(--outline-offset);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    --btn-font-size: 1rem;
+    --btn-padding: 0.875rem 1.5rem 1rem;
+    --btn-radius: 0.5rem;
+    padding: 0 1rem;
+    box-shadow: none;
+  }
+}

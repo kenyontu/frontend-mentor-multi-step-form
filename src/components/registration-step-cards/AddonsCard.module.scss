@@ -1,0 +1,99 @@
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  @media only screen and (min-width: 1024px) {
+    gap: 1rem;
+  }
+}
+
+.addon {
+  border: 1px solid var(--clr-light-gray);
+  border-radius: 8px;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0.6875rem 1rem 0.75rem;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--clr-purple);
+  }
+
+  &:focus {
+    outline: var(--outline);
+  }
+
+  &.checked {
+    border-color: var(--clr-purple);
+    background-color: var(--clr-very-light-gray);
+  }
+
+  &.checked > .checkbox {
+    background-color: var(--clr-purple);
+  }
+
+  &.checked > .checkbox > .checkmark {
+    opacity: 1;
+  }
+}
+
+.checkbox {
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid var(--clr-light-gray);
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.checkmark {
+  opacity: 0;
+}
+
+.name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--clr-denim);
+}
+
+.description {
+  grid-column: 2 / 3;
+  margin-top: 0.1875rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: var(--clr-gray);
+}
+
+.price {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: var(--clr-purple);
+}
+
+@media only screen and (min-width: 1024px) {
+  .addon {
+    padding: 1rem 1.5rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .description {
+    margin-top: 0.4375rem;
+    font-size: 0.9375rem;
+  }
+
+  .price {
+    font-size: 0.9375rem;
+  }
+}

@@ -1,0 +1,33 @@
+.card {
+  align-items: center;
+  padding: 4.9375rem 1.5rem;
+}
+
+.icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.title {
+  margin-top: 1.5rem;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .card {
+    padding: 4.9375rem 0;
+  }
+
+  .icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .title {
+    margin-top: 2rem;
+  }
+}

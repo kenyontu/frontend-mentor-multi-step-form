@@ -1,0 +1,93 @@
+:root {
+  --clr-bg: hsl(218, 100%, 97%);
+  --clr-border: hsl(231, 23%, 87%);
+
+  --clr-denim: hsl(213, 96%, 18%);
+  --clr-purple: hsl(243, 100%, 62%);
+  --clr-light-blue: hsl(228, 100%, 83%);
+  --clr-sky-blue: hsl(206, 94%, 87%);
+  --clr-red-errors: hsl(354, 84%, 57%);
+  --clr-pink: hsl(345, 91%, 74%);
+  --clr-orange: hsl(23, 100%, 75%);
+
+  --clr-gray: hsl(231, 11%, 63%);
+  --clr-light-gray: hsl(229, 24%, 87%);
+  --clr-very-light-gray: hsl(231, 100%, 99%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --outline: 2px solid var(--clr-purple);
+  --outline-offset: 2px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--clr-bg);
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  min-width: 375px;
+}
+
+button {
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+input {
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.text-heading {
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+}
+
+.text-body-lg {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5625rem;
+}
+
+.text-body-md {
+  font-size: 0.875rem; /* 14px */
+}
+
+.text-body-sm {
+  font-size: 0.75rem; /* 12px */
+}
+
+/* TailwindCSS's screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  #root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+}

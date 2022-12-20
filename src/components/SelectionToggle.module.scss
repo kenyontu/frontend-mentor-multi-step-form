@@ -1,0 +1,80 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0.8125rem 0.5rem 0.875rem;
+  border-radius: 8px;
+  background-color: var(--clr-very-light-gray);
+}
+
+.toggleCheck {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.toggle {
+  --toggle-width: 2.375rem;
+  --toggle-height: 1.25rem;
+  --label-spacing: 1.5rem;
+  --handle-size: 0.75rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--toggle-height);
+  width: var(--toggle-width);
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: var(--clr-denim);
+  border-radius: calc(var(--toggle-height) / 2);
+  color: var(--clr-gray);
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: attr(data-left-label);
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(100% + var(--label-spacing));
+    pointer-events: none;
+  }
+
+  &::after {
+    position: absolute;
+    content: attr(data-right-label);
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + var(--label-spacing));
+    pointer-events: none;
+  }
+
+  .toggleCheck:not(:checked) + &::before,
+  .toggleCheck:checked + &::after {
+    color: var(--clr-denim);
+  }
+
+  .toggleCheck:not(checked) + & > .toggleHandle {
+    transform: translateX(0.25rem);
+  }
+
+  .toggleCheck:checked + & > .toggleHandle {
+    transform: translateX(
+      calc(var(--toggle-width) - (var(--handle-size) + 0.25rem))
+    );
+  }
+
+  .toggleCheck:focus + & {
+    outline: var(--outline);
+    outline-offset: var(--outline-offset);
+  }
+}
+
+.toggleHandle {
+  width: var(--handle-size);
+  height: var(--handle-size);
+  display: block;
+  background-color: var(--clr-white);
+  border-radius: 100%;
+  transition: transform 120ms ease-in-out;
+}

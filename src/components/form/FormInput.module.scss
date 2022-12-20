@@ -1,0 +1,55 @@
+.labelContainer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.label {
+  color: var(--clr-denim);
+}
+
+.errorMessage {
+  font-weight: 500;
+  color: var(--clr-red-errors);
+}
+
+.input {
+  width: 100%;
+  margin-top: 0.1875rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--clr-denim);
+  padding: 0.6875rem 1rem 0.75rem;
+  border: 1px solid var(--clr-border);
+  border-radius: 4px;
+
+  &::placeholder {
+    color: var(--clr-gray);
+  }
+
+  &:focus {
+    outline: var(--outline);
+    border-color: var(--clr-purple);
+  }
+
+  &hover {
+    border-color: var(--clr-purple);
+  }
+
+  &.error {
+    border-color: var(--clr-red-errors);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .labelContainer {
+    font-size: 0.875rem;
+  }
+
+  .input {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    padding: 0.9375rem 1rem;
+    border-radius: 8px;
+  }
+}
